@@ -35,7 +35,7 @@ i-0f9b99a2b622d549a
 ```bash
 $ aws ssm start-session --target i-1234567890abcdef0 ---> 請替換成觀察到的 instance id
 
-sh-4.2$ sudo iptables-save | grep "172.20.237.151"
+sh-4.2$ sudo iptables-save | grep "user-1/nginx-service" --> 請替換你的 user-n，格式："USERNAME/nginx-service" username/service名稱
 -A KUBE-SERVICES -d 172.20.237.151/32 -p tcp -m comment --comment "default/nginx-service:name-of-service-port cluster IP" -m tcp --dport 80 -j KUBE-SVC-IQGXNJVVP26VHMIN
 sh-4.2$
 sh-4.2$ sudo iptables-save | grep "172.20.237.151"
