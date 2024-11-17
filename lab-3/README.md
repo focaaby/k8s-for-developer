@@ -49,7 +49,7 @@ sh-4.2$ sudo iptables-save | grep "KUBE-SVC-IQGXNJVVP26VHMIN"
 ```
 
 4. 增加 `spec.type` 為 NodePort，並 `kubectl apply -f` 更新。
-5. 登入 Node 觀察，Service `ClusterIP` 行為
+5. 登入 Node 觀察，Service `NodePort` 行為
 
 ```bash
 $ kubectl get svc nginx-service -o wide
