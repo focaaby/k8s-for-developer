@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 3
+  replicas: 1 
   selector:
     matchLabels:
       app: nginx
@@ -27,4 +27,4 @@ spec:
       volumes:
       - name: nginx-conf
         configMap:
-          name: nginx-conf
+          name: my-nginx-conf
